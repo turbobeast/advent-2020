@@ -2,11 +2,11 @@ package adventutils
 
 import (
 	"io/ioutil"
-	s "strings"
 	"strconv"
+	s "strings"
 )
 
-func ParseInput (path string) ([]int) {
+func ParseInput(path string) []int {
 	content, _ := ioutil.ReadFile(path)
 	invoice := s.Split(string(content), "\n")
 	expenses := make([]int, len(invoice))
